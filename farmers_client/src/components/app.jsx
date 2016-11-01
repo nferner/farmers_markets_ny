@@ -1,25 +1,45 @@
 import React from 'react';
+import MarketList from './markets/marketList.jsx';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      location: "", // will need to include three columns, address line 1, city, state, zip
-      zip: "",
-      hours: "",
-      season: "",
-      website: "",
+      market: '',
+      zip: '',
     }
   }
   componentDidMount() {
-
+    fetch('http://localhost:8080/api/v1/zips').then((response) => {
+      response.json().then((zips) => {
+        this.setState({
+          zips
+        })
+      })
+    })
   }
+
+  handleSearch(e) {
+    const value = e.target.value
+    this.props.router.get(`/zips/${id}`)
+  }
+
   render() {
     return(
       <div>
-        //need to design views/components
+        <input
+          id="zip"
+          name="search"
+          type="text"
+          placeholder="ZIP?"
+          value={this.state.position}
+          onChange={this.handleChange}
+        />
+        <button id="search">Search</button>
+        <MarketList />
       </div>
-    )
+    );
   }
 }
+
+export default App;
