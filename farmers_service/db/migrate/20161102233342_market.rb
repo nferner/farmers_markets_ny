@@ -1,4 +1,4 @@
-class Markets < ActiveRecord::Migration[5.0]
+class Market < ActiveRecord::Migration[5.0]
   def change
     create_table :markets do |t|
       t.string :market

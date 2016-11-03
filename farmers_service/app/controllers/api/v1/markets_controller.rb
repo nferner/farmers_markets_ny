@@ -1,11 +1,6 @@
-class Api::V1::MarketsConstroller < ApplicationController
-
+class Api::V1::MarketsController < ApplicationController
   def index
-    @markets = Market.all.includes(:address, :city, :zip, :link, :hours, :season, :latitude, :longitude)
-    render json: @markets, include: [:addresses, :cities, :zips, :links, :hours, :seasons, :latitudes, :longitudes]
-  end
-
-  def show
-    render json: @markets, include: [:addresses, :cities, :zips, :links, :hours, :seasons, :latitudes, :longitudes]
+    @markets = Market.all
+    render json: @markets
   end
 end
