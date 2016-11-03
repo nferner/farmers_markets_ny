@@ -1,4 +1,5 @@
 import React from 'react';
+import MapView from './maps/mapView.jsx';
 import MarketList from './markets/marketList.jsx';
 
 class App extends React.Component {
@@ -36,6 +37,7 @@ class App extends React.Component {
           onChange={this.handleChange}
         />
         <button id="search">Search</button>
+        <MapView />
         <MarketList />
       </div>
     );
