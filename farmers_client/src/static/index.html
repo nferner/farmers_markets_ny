@@ -5,38 +5,24 @@
     <link rel="stylesheet" href="./stylesheets/style.css">
   </head>
   <body>
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 2,
-          center: new google.maps.LatLng(2.8,-187.3),
-          mapTypeId: 'terrain'
-        });
+    <div id="map" style="width:100%;height:500px"></div>
 
-        // Create a <script> tag and set the USGS URL as the source.
-        var script = document.createElement('script');
-        // This example uses a local copy of the GeoJSON stored at
-        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
+      <script>
+      function myMap() {
+        var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+        var market = new google.maps.LatLng(42.720708, -74.01624)
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {center: market, zoom: 5};
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({position:market});
+        google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);
+        });
+        var infowindow = new google.maps.InfoWindow({content:"Hello World!"});
+        marker.setMap(map);
       }
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        }
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=
-    AIzaSyAtexJssTqaidIpfZ4Q7-VITINDx6lQhyY&callback=initMap">
-    </script>
+      </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL02Rn5sd62yXQvz9IwEuvvjt4Vdi24TA&callback=myMap" async defer></script>
     <div id="root"></div>
     <script src="bundle.js"></script>
   </body>

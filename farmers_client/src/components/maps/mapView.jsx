@@ -8,10 +8,7 @@ class MapView extends React.Component {
   }
   render() {
     return(
-      <div id="mapView">
-        <p>a google map should go here... not in the html</p>
-        <MapProcessor />
-      </div>
+      <div id="map"></div>
     );
   }
 }
