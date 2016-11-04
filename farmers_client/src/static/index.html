@@ -14,12 +14,14 @@
         var mapCanvas = document.getElementById("map");
         var mapOptions = {center: market, zoom: 5};
         var map = new google.maps.Map(mapCanvas, mapOptions);
-        var marker = new google.maps.Marker({position:market});
+        var marker = new google.maps.Marker({position:market, myCenter});
         google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);
         });
         var infowindow = new google.maps.InfoWindow({content:"Hello World!"});
         marker.setMap(map);
       }
+
+      /*for multiple markers to work, am going to need to get lat/long from database, put into array which goes through a for loop similar to this one: http://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example */ 
       </script>
 
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL02Rn5sd62yXQvz9IwEuvvjt4Vdi24TA&callback=myMap" async defer></script>
