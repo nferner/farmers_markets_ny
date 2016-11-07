@@ -1,36 +1,22 @@
 import React from 'react';
+import {Gmaps, Marker, InfoWindow } from 'react-gmaps';
+import Mapper from './maps/mapper.jsx';
 import request from 'superagent';
 import MapView from './maps/mapView.jsx';
 import MarketForm from './markets/marketForm.jsx';
+import Infowindow from './maps/infowindow.jsx';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      markets: [],
-    }
-  }
-  componentDidMount() {
-    request.get('http://localhost:3000/api/v1/markets').then((res) => {
-      this.setState({
-        markets: res.body
-      })
-    })
+  constructor() {
+    super();
   }
   render() {
-    const marketElement = this.state.markets.map((market, idx) => {
-      return (
-        <MarketForm
-          key={idx}
-          text={market.market}
-        />
-      );
-    });
     return (
       <div>
-        {
-          marketElement
-        }
+        <h1 id='title'>NY Farmers Markets</h1>
+        <div id='wrapper'>
+          <MapView id='map'/>
+        </div>
       </div>
     )
   }

@@ -1,11 +1,22 @@
 body {
-  background-color: pink;
+  background-color: #1978FF;
   height: 900px;
-  width: 500px;
+  width: 900px;
 }
 #map {
-  height: 50%;
-  width: 50%;
-  margin-left: 25%;
-  padding: 0;
+  margin-left: 14%;
+  border: solid, thin, black;
+}
+
+#title {
+  position: relative;
+  margin-left: 35%;
+  color: #B2EB00;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#wrapper {
+  background-color: #B2EB00;
+  height: 600px;
+  margin-left: 7%;
 }

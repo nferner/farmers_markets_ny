@@ -14,7 +14,8 @@ CSV.foreach("./lib/assets/Farmers_Markets_in_New_York_State_API.csv", headers: t
     zip: row["Zip"],
     link: row["Market Link"],
     hours: row["Operation Hours"],
-    season: row["Operation Season"], latitude: row["Latitude"],
+    season: row["Operation Season"],
+    latitude: row["Latitude"],
     longitude: row["Longitude"]
     })
 end

@@ -2,8 +2,8 @@ import React from 'react';
 import MarketForm from './marketForm.jsx';
 
 class MarketList extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
   render() {
     return(

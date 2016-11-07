@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20161102233342) do
     t.string  "link"
     t.string  "hours"
     t.string  "season"
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.integer "latitude"
+    t.integer "longitude"
   end
 
 end

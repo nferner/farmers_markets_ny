@@ -8,8 +8,8 @@ class Market < ActiveRecord::Migration[5.0]
       t.string :link
       t.string :hours
       t.string :season
-      t.decimal :latitude
-      t.decimal :longitude
+      t.integer :latitude
+      t.integer :longitude
     end
   end
 end
