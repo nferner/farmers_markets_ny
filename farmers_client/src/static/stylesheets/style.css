@@ -1,22 +1,31 @@
 body {
-  background-color: #1978FF;
+  background-image: url('farm.jpg');
   height: 900px;
   width: 900px;
+  background-size: cover;
 }
 #map {
-  margin-left: 14%;
+  margin-left: 4%;
   border: solid, thin, black;
 }
 
 #title {
   position: relative;
-  margin-left: 35%;
-  color: #B2EB00;
+  margin-left: 37%;
+  color: #1978FF;
   font-family: 'Montserrat', sans-serif;
 }
 
-#wrapper {
+
+
+#info {
   background-color: #B2EB00;
-  height: 600px;
+  color: #1978FF;
+  font-family: 'Montserrat', sans-serif;
+  border: solid thick #1978FF;
   margin-left: 7%;
+}
+
+#format {
+  margin-left: 14%;
 }

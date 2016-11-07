@@ -46,8 +46,8 @@ class MapView extends React.Component {
     return (
       <div id='map'>
         <Gmaps
-          width={'600px'}
-          height={'600px'}
+          width={'900px'}
+          height={'700px'}
           lat={40.646462}
           lng={-73.973158}
           zoom={12}
@@ -57,7 +57,6 @@ class MapView extends React.Component {
               mapMarker
             }
         </Gmaps>
-        <p></p>
       </div>
     );
   }
