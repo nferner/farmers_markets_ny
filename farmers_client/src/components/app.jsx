@@ -1,10 +1,10 @@
 import React from 'react';
 import {Gmaps, Marker, InfoWindow } from 'react-gmaps';
-import Mapper from './maps/mapper.jsx';
+import Mapper from './map/mapper.jsx';
 import request from 'superagent';
-import MapView from './maps/mapView.jsx';
+import MapView from './map/mapView.jsx';
 import MarketForm from './markets/marketForm.jsx';
-import Infowindow from './maps/infowindow.jsx';
+
 
 class App extends React.Component {
   constructor() {
@@ -35,12 +35,12 @@ class App extends React.Component {
     return (
       <div>
         <h1 id='title'>NY Farmers Markets</h1>
-        <div id='wrapper'>
-          <MapView id='map'/>
-      </div>
-        {
-          //marketInfo
-        }
+        <div id='scroll'>
+          {
+            marketInfo
+          }
+        </div>
+        <MapView id='map'/>  
       </div>
     )
   }

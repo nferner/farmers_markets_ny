@@ -46,8 +46,11 @@ class MapView extends React.Component {
     return (
       <div id='map'>
         <Gmaps
-          width={'900px'}
-          height={'700px'}
+          width={'37rem'}
+          height={'20rem'}
+          border={'0px'}
+          display={'inline-flex'}
+          position={'relative'}
           lat={40.646462}
           lng={-73.973158}
           zoom={12}

@@ -1,31 +1,25 @@
 body {
-  background-image: url('farm.jpg');
-  height: 900px;
-  width: 900px;
-  background-size: cover;
+  background-color: white;
+  width: 100%;
 }
-#map {
-  margin-left: 4%;
-  border: solid, thin, black;
-}
-
 #title {
-  position: relative;
-  margin-left: 37%;
-  color: #1978FF;
-  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  text-align: center;
 }
 
-
-
-#info {
-  background-color: #B2EB00;
-  color: #1978FF;
-  font-family: 'Montserrat', sans-serif;
-  border: solid thick #1978FF;
-  margin-left: 7%;
+#map {
+  display: flex;
+  margin-left: 2rem;
 }
 
+#scroll {
+  width: 20rem;
+  float:right;
+  height: 20rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-right: 2rem;
+}
 #format {
-  margin-left: 14%;
+  margin-left: 1rem;
 }

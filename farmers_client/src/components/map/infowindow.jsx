@@ -50,4 +50,6 @@ class Infowindow extends React.Component {
   }
 }
 
-export default Infowindow;
+InfoWindow.propTypes = proTypes;
+
+export default InfoWindow;
