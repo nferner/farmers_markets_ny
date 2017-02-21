@@ -19,12 +19,17 @@ class App extends React.Component {
       })
     })
   }
+  onClick(e) {
+    console.log(`${market.hours}`);
+  }
   render() {
     const marketInfo = this.state.markets.map((market, idx) => {
       return (
         <div id='info' key={idx}>
           <div id='format'>
-            <h3><a href={market.link}>{market.market}</a></h3>
+            <h3>
+              <a href={market.link}>{market.market}</a></h3>
+              <button onClick={this.onClick} type="button">Find Me</button>
             <p>{market.address}, {market.city}, NY {market.zip}</p>
             <p>{market.hours}</p>
             <p>{market.season}</p>
@@ -40,7 +45,7 @@ class App extends React.Component {
             marketInfo
           }
         </div>
-        <MapView id='map'/>  
+        <MapView id='map'/>
       </div>
     )
   }

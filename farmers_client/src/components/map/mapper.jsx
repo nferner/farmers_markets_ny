@@ -15,9 +15,7 @@ const propTypes = {
 
 class Mapper extends React.Component {
   render() {
-
     return (
-
       <div>
         {this.props.marketLatitude}
         {this.props.marketLongitude}

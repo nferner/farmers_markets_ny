@@ -23,3 +23,6 @@ body {
 #format {
   margin-left: 1rem;
 }
+button {
+  background-color: white;
+}

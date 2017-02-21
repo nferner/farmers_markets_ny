@@ -25,12 +25,8 @@ class MapView extends React.Component {
       disableDefaultUI: false
     });
   }
-  onCloseClick() {
-    console.log('onCloseClick');
-  }
-
   onClick(e) {
-    console.log(`${this.state.markets}`);
+    console.log(`ok`);
   }
   render() {
     const mapMarker = this.state.markets.map((market, idx) => {
